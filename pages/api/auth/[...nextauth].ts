@@ -17,11 +17,15 @@ type User = {
 
 export default NextAuth({
     // https://next-auth.js.org/configuration/providers
+
+    //https://next-auth.js.org/getting-started/example
     providers: [
         // https://github.com/nextauthjs/next-auth/blob/main/src/providers/github.js
         Providers.GitHub({
-            clientId: process.env.GITHUB_CLIENT_ID,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET,
+            // clientId: process.env.GITHUB_CLIENT_ID,
+            clientId: '7d1dc6725064bd0b70bb',
+            // clientSecret: process.env.GITHUB_CLIENT_SECRET,
+            clientSecret: ' 6a282baa50736b2878a90facec8955c77d56f9cf',
             profile(profile: Profile): User {
                 // You can use the tokens, in case you want to fetch more profile information
                 // For example several OAuth providers do not return email by default.
