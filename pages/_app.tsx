@@ -6,6 +6,8 @@ import { useSession, signIn } from 'next-auth/client'
 import { RecoilRoot, useSetRecoilState } from 'recoil'
 import { smallDeviceState, scaleState, meState } from '../store/atom'
 
+
+
 import GA from '../components/minor/ga'
 import Spin from '../components/minor/spin'
 
@@ -100,7 +102,8 @@ function Auth({ children }: { children: JSX.Element }) {
     }, [loading, developer, session])
 
     if (!loading) {
-        if (developer || !!session?.user) {
+        // Rectify the !!session.user
+        if (developer || session?.user) {
             return children
         }
     }

@@ -24,10 +24,9 @@ export default NextAuth({
     providers: [
         // https://github.com/nextauthjs/next-auth/blob/main/src/providers/github.js
         Providers.GitHub({
-            // clientId: process.env.GITHUB_CLIENT_ID,
-            clientId: '7d1dc6725064bd0b70bb',
-            // clientSecret: process.env.GITHUB_CLIENT_SECRET,
-            clientSecret: '7b4c39ef72c601e6fa8014f868d2fb8be50048c6',
+            clientId: process.env.GITHUB_CLIENT_ID,
+            clientSecret: process.env.GITHUB_CLIENT_SECRET,
+             
          
             profile(profile: Profile): User {
                 // You can use the tokens, in case you want to fetch more profile information
