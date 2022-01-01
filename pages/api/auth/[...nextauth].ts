@@ -16,6 +16,13 @@ type User = {
     image: string
 }
 
+console.log('[next-auth]', NextAuth)
+console.log('GITHUB CLIENT ID', process.env.GITHUB_CLIENT_ID)
+console.log('GITHUB CLIENT SECRET', process.env.GITHUB_CLIENT_SECRET)
+
+
+
+
 export default NextAuth({
     // https://next-auth.js.org/configuration/providers
 
