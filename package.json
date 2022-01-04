@@ -46,6 +46,7 @@
     "tailwindcss": "^2.2.16"
   },
   "devDependencies": {
+    "@next-auth/firebase-adapter": "^0.1.2-pr.183-76202b42.8",
     "@next/env": "^12.0.3",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",

@@ -3,7 +3,11 @@ import { RtcTokenBuilder } from 'agora-access-token'
 
 const rtctoken = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {
-        const { uid, channelName, role } = req.body
+
+        const uid = Math.floor(Math.random() * 100000);
+
+        const {  channelName, role } = req.body
+       
         if (uid && channelName && role) {
             const expirationTimeInSeconds = 24 * 60 * 60
             const currentTimestamp = Math.floor(Date.now() / 1000)

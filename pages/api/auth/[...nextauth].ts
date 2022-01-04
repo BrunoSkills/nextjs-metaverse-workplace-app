@@ -1,7 +1,6 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
-
 type Profile = {
     id: string
     login: string
@@ -16,24 +15,13 @@ type User = {
     image: string
 }
 
-
- 
-
-
-
-
 export default NextAuth({
     // https://next-auth.js.org/configuration/providers
-
-    //https://next-auth.js.org/getting-started/example
-    
     providers: [
         // https://github.com/nextauthjs/next-auth/blob/main/src/providers/github.js
         Providers.GitHub({
             clientId: process.env.GITHUB_CLIENT_ID,
             clientSecret: process.env.GITHUB_CLIENT_SECRET,
-             
-         
             profile(profile: Profile): User {
                 // You can use the tokens, in case you want to fetch more profile information
                 // For example several OAuth providers do not return email by default.
